@@ -57,3 +57,35 @@ if reply.downcase == 'yes'
 else
  puts 'GET OUT!!' end
 end
+
+
+#Looping - while a certain conditon is true keep on looping
+
+input = ' '
+
+while true
+  input =  gets.chomp
+  puts input
+  if input == 'bye'
+    break
+  end
+end
+puts 'see ya laterrr!'
+
+
+#Better code using elsif
+puts 'Hello, what\'s your name?' name = gets.chomp
+puts 'Hello, ' + name + '.'
+if name == 'Chris'
+  puts 'What a lovely name!'
+elsif name == 'Katy'
+  puts 'What a lovely name!'
+end
+
+# ^^^^^ BUT it does not follow the DRY rule. Don't repeat yourself!
+if name == 'Chris' || name == 'Katy'
+  puts 'What a lovely name!'
+end
+
+# || 0r
+# && and
