@@ -65,12 +65,22 @@ numbers.each{|x| puts x if x.even?} #Even numbers
 numbers.each{|x| puts x if x %2 !=0} #odd
 numbers.each{|x| puts x if x %2 ==0} #even - but does NOT print into an array
 
+[1,2,3,4,5,6].select { |n| n.even? } # output - [2, 4, 6]
+[1,2,3,4,5,6].select(&:even?) # output - output - [2, 4, 6]
+
+[1,2,3,4,5,6].select(&:odd?) #output - [1, 3, 5]
+
+numbers.select(&:odd?) # [1, 3, 5, 7, 9]
+
+
 numbers = [1,2,3,4,5,6,7,8,9,10]
 numbers.map do |x|
   if x %2 != 0
     puts x
   end
 end
+
+puts x if x%2 !=0
 #output =
 # 1
 # 3
@@ -89,6 +99,11 @@ p array
 # ******************
 #Q3 puts each name that starts with ‘S’ from
 #[‘Sandy’, ‘Terrence’,‘Susan’, ‘Humphrey’, ‘Simone’, ‘Englebert’, ‘Imogen’, ‘Ron’]
+
+names = [‘Sandy’, ‘Terrence’,‘Susan’, ‘Humphrey’, ‘Simone’, ‘Englebert’, ‘Imogen’, ‘Ron’]
+names.select {|x| x.start_with?('s')}.join(", ")
+#select variable in ruby - select is used to filter through an array if you want to return something that is true or false
+
 
 # ******************
 #Q4 create a new array of these names in block caps
