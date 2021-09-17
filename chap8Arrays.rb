@@ -109,6 +109,12 @@ names.select {|x| x.start_with?('s')}.join(", ")
 #Q4 create a new array of these names in block caps
 #[‘Sandy’, ‘Terrence’,‘Susan’, ‘Humphrey’, ‘Simone’, ‘Englebert’, ‘Imogen’, ‘Ron’]
 
+namesTwo = [‘Sandy’, ‘Terrence’,‘Susan’, ‘Humphrey’, ‘Simone’, ‘Englebert’, ‘Imogen’, ‘Ron’]
+
+namesTwo.map{ |capName| capName.upcase}.join(", ")
+
+
+
 # ******************
 #get user input and add whatever they say to an array,
 #stop when they say ‘stop’ -> combining loops and arrays
